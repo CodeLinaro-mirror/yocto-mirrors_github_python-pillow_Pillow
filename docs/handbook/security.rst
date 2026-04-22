@@ -87,8 +87,8 @@ encode-decode cycle invisibly.
 **T-3 — Supply chain tampering**
 
 Pre-compiled wheels bundle libjpeg-turbo, libpng, libtiff, libwebp, openjpeg,
-freetype, and littlecms2. A compromised PyPI release or build pipeline could
-ship malicious binaries.
+freetype, littlecms2, and other libraries. A compromised PyPI release or build pipeline
+could ship malicious binaries.
 
 *Mitigations:* pin with hash verification
 (``python3 -m pip install --require-hashes``); monitor `Pillow security advisories
