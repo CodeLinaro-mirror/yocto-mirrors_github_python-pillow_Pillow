@@ -614,7 +614,8 @@ def buildProofTransform(
         pyCMS documentation for further information about rendering intents.
     :param proofRenderingIntent: Integer (0-3) specifying the rendering intent
         you wish to use for proof->output transform. See :py:class:`Intent`.
-        Defaults to :py:attr:`Intent.ABSOLUTE_COLORIMETRIC`.
+        Defaults to :py:attr:`Intent.ABSOLUTE_COLORIMETRIC`. See the pyCMS
+        documentation for further information about rendering intents.
     :param flags: Integer (0-...) specifying additional flags
     :returns: An :py:class:`ImageCmsTransform` object.
     :exception PyCMSError:
@@ -971,7 +972,8 @@ def getDefaultIntent(profile: _CmsProfileCompatible) -> int:
     :param profile: EITHER a valid CmsProfile object, OR a string of the
         filename of an ICC profile.
     :returns: Integer 0-3 specifying the default rendering intent for this
-        profile. See :py:class:`Intent`.
+        profile. See :py:class:`Intent`. See the pyCMS documentation for
+        further information about rendering intents.
     :exception PyCMSError:
     """
 
@@ -1003,7 +1005,8 @@ def isIntentSupported(
     :param profile: EITHER a valid CmsProfile object, OR a string of the
         filename of an ICC profile.
     :param intent: Integer (0-3) specifying the rendering intent you wish to
-        use with this profile. See :py:class:`Intent`.
+        use with this profile. See :py:class:`Intent`. See the pyCMS
+        documentation for further information about rendering intents.
     :param direction: Integer specifying if the profile is to be used for
         input, output, or proof. See :py:class:`Direction`.
 
